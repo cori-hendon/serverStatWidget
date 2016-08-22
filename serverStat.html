@@ -8,84 +8,6 @@
 <input type='file' accept='text/plain' onchange='openFile(event)'><br>
 <div id='output'>
 
-<!--
-<h1>Display type 1</h1>
-<div class="wrapper">
-	<h2>HPC Cluster Nodes</h2>
-	<div class="gridBox">
-		<div class="nodeSpot">
-			<img id="node0" src="images\server_neutral.png">
-		</div>
-		<div class="nodeSpot">
-			<img id="node1" src="images\server_neutral.png">
-		</div>
-		<div class="nodeSpot">
-			<img id="node2" src="images\server_neutral.png">
-		</div>
-		<div class="nodeSpot">
-			<img id="node3" src="images\server_neutral.png">
-		</div>
-		
-		<div class="nodeSpot">
-			<img id="node4" src="images\server_neutral.png">
-		</div>
-		<div class="nodeSpot">
-			<img id="node5" src="images\server_neutral.png">
-		</div>
-		<div class="nodeSpot">
-			<img id="node6" src="images\server_neutral.png">
-		</div>
-		<div class="nodeSpot">
-			<img id="node7" src="images\server_neutral.png">
-		</div>
-		
-		</div>
-	</div>
-</div>
-//-->
-
-
-<!--
-<h1>Display type 2</h1>
-<div class="wrapper">
-<h2>HPC Cluster Nodes</h2>
-<table width="556px">
-	<tr>
-		<th>Node Name</th><th>Status</th><th>Ping (ms)</th>
-	</tr>
-	<tr>
-		<td id="node0TableName"> </td><td ><img id="g2w-gpfs" src="" height="30" width="30"></td><td id="node0TablePing"> </td>
-	</tr>
-	<tr>
-		<td id="node1TableName"> </td><td ><img id="g2w-gpfs2" src="" height="30" width="30"></td><td id="node1TablePing"> </td>
-	</tr>
-	<tr>
-		<td id="node2TableName"> </td><td ><img id="gs0" src="" height="30" width="30"></td><td id="node2TablePing"> </td>
-	</tr>
-	<tr>
-		<td id="node3TableName"> </td><td ><img id="gs1" src="" height="30" width="30"></td><td id="node3TablePing"> </td>
-	</tr>
-	
-	<tr>
-		<td id="node4TableName"> </td><td ><img id="gs2" src="" height="30" width="30"></td><td id="node4TablePing"> </td>
-	</tr>
-	<tr>
-		<td id="node5TableName"> </td><td ><img id="gs3" src="" height="30" width="30"></td><td id="node5TablePing"> </td>
-	</tr>
-	<tr>
-		<td id="node6TableName"> </td><td ><img id="mrrc-ws11" src="" height="30" width="30"></td><td id="node6TablePing"> </td>
-	</tr>
-	<tr>
-		<td id="node7TableName"> </td><td ><img id="mrrc-ws54" src="" height="30" width="30"></td><td id="node7TablePing"> </td>
-	</tr>
-</table>
-</div>
-//-->
-
-
-
-
-
 
 
 <h1> Display type 3 </h1>
@@ -283,9 +205,7 @@ var openFile = function(event) {
         var reader = new FileReader();
         reader.onload = function(){
           var text = reader.result;
-          //var node = document.getElementById('output');
-          //node.innerText = text;
-		  
+
 		  //parse the text...
 		  var rows = text.split("\n");
 		  for (var i = 0; i < rows.length; i++) {
@@ -293,38 +213,20 @@ var openFile = function(event) {
 			var cols = rows[i].split(",");
 			var name = cols[0];
 			var stat = cols[1].trim();
-			//var ping = cols[2];
-			
-			
-			//document.getElementById(node+"TableName").innerText = node
-			//if (ping == ''){
-			//	document.getElementById(node+"TablePing").innerText = '--'
-			//} else {
-			//	document.getElementById(node+"TablePing").innerText = ping
-			//}
-			
-			
+
 			switch(stat) {
 				case 'unknown':
-					//document.getElementById(node).src = 'images\\server_down.png'
-					//document.getElementById(node+"TableStatus").src = "images\\redButton.png"
 					document.getElementById(name).src = "images\\redButton.png"
-					
 					break;
 				case 'down':
-					//document.getElementById(node+"TableStatus").src = "images\\yellowButton.png"
 					document.getElementById(name).src = "images\\yellowButton.png"
 					break;
 				case 'active':
-					//document.getElementById(node).style.backgroundColor = "green"
-					//document.getElementById(node+"TableStatus").src = "images\\greenButton.png"
 					document.getElementById(name).src = "images\\greenButton.png"
 					break;
 				default:
-					document.getElementById(name).src = "images\\greenButton.png"
-					//document.getElementById(node).style.backgroundColor = "black"
+					document.getElementById(name).src = "images\\yellowButton.png"
 			}
-			//document.getElementById(node).title = "Node: " + node + "\n" + "ping: " + ping + "ms";
 			document.getElementById(name).title = "Name: " + name + "\nStatus: " + stat;
 		  }
 		  

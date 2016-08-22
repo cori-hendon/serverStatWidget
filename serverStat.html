@@ -1,0 +1,335 @@
+<html>
+<head>
+	<title> nodeStatus </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body bgcolor="#F9F9F9">
+
+<input type='file' accept='text/plain' onchange='openFile(event)'><br>
+<div id='output'>
+
+<h1>Display type 1</h1>
+<div class="wrapper">
+	<h2>HPC Cluster Nodes</h2>
+	<div class="gridBox">
+		<div class="nodeSpot">
+			<img id="node0" src="images\server_neutral.png">
+		</div>
+		<div class="nodeSpot">
+			<img id="node1" src="images\server_neutral.png">
+		</div>
+		<div class="nodeSpot">
+			<img id="node2" src="images\server_neutral.png">
+		</div>
+		<div class="nodeSpot">
+			<img id="node3" src="images\server_neutral.png">
+		</div>
+		
+		<div class="nodeSpot">
+			<img id="node4" src="images\server_neutral.png">
+		</div>
+		<div class="nodeSpot">
+			<img id="node5" src="images\server_neutral.png">
+		</div>
+		<div class="nodeSpot">
+			<img id="node6" src="images\server_neutral.png">
+		</div>
+		<div class="nodeSpot">
+			<img id="node7" src="images\server_neutral.png">
+		</div>
+		
+		</div>
+	</div>
+</div>
+
+<!--
+<h1>Display type 2</h1>
+<div class="wrapper">
+<h2>HPC Cluster Nodes</h2>
+<table width="556px">
+	<tr>
+		<th>Node Name</th><th>Status</th><th>Ping (ms)</th>
+	</tr>
+	<tr>
+		<td id="node0TableName"> </td><td ><img id="g2w-gpfs" src="" height="30" width="30"></td><td id="node0TablePing"> </td>
+	</tr>
+	<tr>
+		<td id="node1TableName"> </td><td ><img id="g2w-gpfs2" src="" height="30" width="30"></td><td id="node1TablePing"> </td>
+	</tr>
+	<tr>
+		<td id="node2TableName"> </td><td ><img id="gs0" src="" height="30" width="30"></td><td id="node2TablePing"> </td>
+	</tr>
+	<tr>
+		<td id="node3TableName"> </td><td ><img id="gs1" src="" height="30" width="30"></td><td id="node3TablePing"> </td>
+	</tr>
+	
+	<tr>
+		<td id="node4TableName"> </td><td ><img id="gs2" src="" height="30" width="30"></td><td id="node4TablePing"> </td>
+	</tr>
+	<tr>
+		<td id="node5TableName"> </td><td ><img id="gs3" src="" height="30" width="30"></td><td id="node5TablePing"> </td>
+	</tr>
+	<tr>
+		<td id="node6TableName"> </td><td ><img id="mrrc-ws11" src="" height="30" width="30"></td><td id="node6TablePing"> </td>
+	</tr>
+	<tr>
+		<td id="node7TableName"> </td><td ><img id="mrrc-ws54" src="" height="30" width="30"></td><td id="node7TablePing"> </td>
+	</tr>
+</table>
+</div>
+//-->
+
+
+
+
+
+
+
+<h1> Display type 3 </h1>
+<div class="wrapper">
+<div class="widgetBackground">
+<table class="invisibleTable">
+	<tr>
+		<td width="40%">
+			<table class="visibleTable">
+				<th colspan="4">NSD & GridNAS</th>
+				<tr> 
+					<td><img id="gs0" src="" width="20" height="20"></td>
+					<td><img id="gs1" src="" width="20" height="20"></td>
+					<td><img id="gs2" src="" width="20" height="20"></td>
+					<td><img id="gs3" src="" width="20" height="20"></td>
+				</tr>
+			</table>
+		</td>
+		<td width="30%">
+			<table class="visibleTable">
+				<th colspan="2">WOS</th>
+				<tr>
+					<td><img id="g2w-gpfs" src="" width="20" height="20"></td>
+					<td><img id="g2w-gpfs2" src="" width="20" height="20"></td>
+				</tr>
+			</table>
+		</td>
+		<td width="20%">
+			<table class="visibleTable">
+				<th colspan="1">App.</th>
+				<tr> <td><img id="lcmodel" src="" width="20" height="20"></td></tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="3">
+			<table class="visibleTable">
+				<th colspan="10">Workstations</th>
+				<tr>
+					<td><img id="mrrc-ws01" src="" width="20" height="20"></td>
+					<td><img id="mrrc-ws02" src="" width="20" height="20"></td>
+					<td><img id="mrrc-ws03" src="" width="20" height="20"></td>
+					<td><img id="mrrc-ws04" src="" width="20" height="20"></td>
+					<td><img id="mrrc-ws05" src="" width="20" height="20"></td>
+					<td><img id="mrrc-ws06" src="" width="20" height="20"></td>
+					<td><img id="mrrc-ws07" src="" width="20" height="20"></td>
+					<td><img id="mrrc-ws08" src="" width="20" height="20"></td>
+					<td><img id="mrrc-ws09" src="" width="20" height="20"></td>
+					<td><img id="mrrc-ws10" src="" width="20" height="20"></td>
+					
+				</tr>
+				<tr>
+					<td><img id="mrrc-ws11" src="" width="20" height="20"></td>
+					<td><img id="mrrc-ws12" src="" width="20" height="20"></td>
+					<td><img id="mrrc-ws13" src="" width="20" height="20"></td>
+					<td><img id="mrrc-ws14" src="" width="20" height="20"></td>
+					<td><img id="mrrc-ws15" src="" width="20" height="20"></td>
+					<td><img id="mrrc-ws51" src="" width="20" height="20"></td>
+					<td><img id="mrrc-ws52" src="" width="20" height="20"></td>
+					<td><img id="mrrc-ws53" src="" width="20" height="20"></td>
+					<td><img id="mrrc-ws54" src="" width="20" height="20"></td>
+					<td></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="3">
+			<table class="visibleTable">
+			<th colspan="10">Compute Nodes</th>
+			<tr>
+				<td><img id="n0-703" src="" width="20" height="20"></td>
+				<td><img id="n1-703" src="" width="20" height="20"></td>
+				<td><img id="n2-703" src="" width="20" height="20"></td>
+				<td><img id="n3-703" src="" width="20" height="20"></td>
+				<td><img id="n4-703" src="" width="20" height="20"></td>
+				<td><img id="n5-703" src="" width="20" height="20"></td>
+				<td><img id="n6-703" src="" width="20" height="20"></td>
+				<td><img id="n7-703" src="" width="20" height="20"></td>
+				<td><img id="n8-703" src="" width="20" height="20"></td>
+				<td><img id="n9-703" src="" width="20" height="20"></td>
+			</tr>
+			<tr>
+				<td><img id="n10-703" src="" width="20" height="20"></td>
+				<td><img id="n11-703" src="" width="20" height="20"></td>
+				<td><img id="n12-703" src="" width="20" height="20"></td>
+				<td><img id="n13-703" src="" width="20" height="20"></td>
+				<td><img id="n14-703" src="" width="20" height="20"></td>
+				<td><img id="n15-703" src="" width="20" height="20"></td>
+				<td><img id="n16-703" src="" width="20" height="20"></td>
+				<td><img id="n17-703" src="" width="20" height="20"></td>
+				<td><img id="n18-703" src="" width="20" height="20"></td>
+				<td><img id="n19-703" src="" width="20" height="20"></td>
+			</tr>
+			<tr>
+				<td><img id="n20-703" src="" width="20" height="20"></td>
+				<td><img id="n21-703" src="" width="20" height="20"></td>
+				<td><img id="n22-703" src="" width="20" height="20"></td>
+				<td><img id="n23-703" src="" width="20" height="20"></td>
+				<td><img id="n24-703" src="" width="20" height="20"></td>
+				<td><img id="n25-703" src="" width="20" height="20"></td>
+				<td><img id="n26-703" src="" width="20" height="20"></td>
+				<td><img id="n27-703" src="" width="20" height="20"></td>
+				<td><img id="n28-703" src="" width="20" height="20"></td>
+				<td><img id="n29-703" src="" width="20" height="20"></td>
+			</tr>
+			<tr>
+				<td><img id="n30-703" src="" width="20" height="20"></td>
+				<td><img id="n31-703" src="" width="20" height="20"></td>
+				<td><img id="n32-703" src="" width="20" height="20"></td>
+				<td><img id="n33-703" src="" width="20" height="20"></td>
+				<td><img id="n34-703" src="" width="20" height="20"></td>
+				<td><img id="n35-703" src="" width="20" height="20"></td>
+				<td><img id="n36-703" src="" width="20" height="20"></td>
+				<td><img id="n37-703" src="" width="20" height="20"></td>
+				<td><img id="n38-703" src="" width="20" height="20"></td>
+				<td><img id="n39-703" src="" width="20" height="20"></td>
+			</tr>
+			<tr>
+				<td><img id="n40-703" src="" width="20" height="20"></td>
+				<td><img id="n41-703" src="" width="20" height="20"></td>
+				<td><img id="n42-703" src="" width="20" height="20"></td>
+				<td><img id="n43-703" src="" width="20" height="20"></td>
+				<td><img id="n44-703" src="" width="20" height="20"></td>
+				<td><img id="n45-703" src="" width="20" height="20"></td>
+				<td><img id="n46-703" src="" width="20" height="20"></td>
+				<td><img id="n47-703" src="" width="20" height="20"></td>
+				<td><img id="n48-703" src="" width="20" height="20"></td>
+				<td><img id="n49-703" src="" width="20" height="20"></td>
+			</tr>
+			<tr>
+				<td><img id="n50-703" src="" width="20" height="20"></td>
+				<td><img id="n51-703" src="" width="20" height="20"></td>
+				<td><img id="n52-703" src="" width="20" height="20"></td>
+				<td><img id="n53-703" src="" width="20" height="20"></td>
+				<td><img id="n54-703" src="" width="20" height="20"></td>
+				<td><img id="n55-703" src="" width="20" height="20"></td>
+				<td><img id="n56-703" src="" width="20" height="20"></td>
+				<td><img id="n57-703" src="" width="20" height="20"></td>
+				<td><img id="n58-703" src="" width="20" height="20"></td>
+				<td><img id="n59-703" src="" width="20" height="20"></td>
+			</tr>
+			<tr>
+				<td><img id="n60-703" src="" width="20" height="20"></td>
+				<td><img id="n61-703" src="" width="20" height="20"></td>
+				<td><img id="n62-703" src="" width="20" height="20"></td>
+				<td><img id="n63-703" src="" width="20" height="20"></td>
+				<td><img id="n64-703" src="" width="20" height="20"></td>
+				<td><img id="n65-703" src="" width="20" height="20"></td>
+				<td><img id="n66-703" src="" width="20" height="20"></td>
+				<td><img id="n67-703" src="" width="20" height="20"></td>
+				<td><img id="n68-703" src="" width="20" height="20"></td>
+				<td><img id="n69-703" src="" width="20" height="20"></td>
+			</tr>
+			<tr>
+				<td><img id="n70-703" src="" width="20" height="20"></td>
+				<td><img id="n71-703" src="" width="20" height="20"></td>
+				<td><img id="n72-703" src="" width="20" height="20"></td>
+				<td><img id="n73-703" src="" width="20" height="20"></td>
+				<td><img id="n74-703" src="" width="20" height="20"></td>
+				<td><img id="n75-703" src="" width="20" height="20"></td>
+				<td><img id="n76-703" src="" width="20" height="20"></td>
+				<td><img id="n77-703" src="" width="20" height="20"></td>
+				<td><img id="n78-703" src="" width="20" height="20"></td>
+				<td><img id="n79-703" src="" width="20" height="20"></td>
+			</tr>
+			<tr>
+				<td><img id="n80-703" src="" width="20" height="20"></td>
+				<td><img id="n81-703" src="" width="20" height="20"></td>
+				<td><img id="n82-703" src="" width="20" height="20"></td>
+				<td><img id="n83-703" src="" width="20" height="20"></td>
+				<td><img id="n84-703" src="" width="20" height="20"></td>
+				<td><img id="n85-703" src="" width="20" height="20"></td>
+				<td><img id="n86-703" src="" width="20" height="20"></td>
+				<td><img id="n87-703" src="" width="20" height="20"></td>
+				<td><img id="lvm83-703" src="" width="20" height="20"></td>
+				<td><img id="lvm92-703" src="" width="20" height="20"></td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+			
+</div>
+</div>
+</body>
+
+
+
+<script type="text/javascript">
+
+var openFile = function(event) {
+        var input = event.target;
+
+        var reader = new FileReader();
+        reader.onload = function(){
+          var text = reader.result;
+          //var node = document.getElementById('output');
+          //node.innerText = text;
+		  
+		  //parse the text...
+		  var rows = text.split("\n");
+		  for (var i = 0; i < rows.length; i++) {
+			var node = "node" + i;
+			var cols = rows[i].split(",");
+			var name = cols[0];
+			var stat = cols[1].trim();
+			//var ping = cols[2];
+			
+			
+			//document.getElementById(node+"TableName").innerText = node
+			//if (ping == ''){
+			//	document.getElementById(node+"TablePing").innerText = '--'
+			//} else {
+			//	document.getElementById(node+"TablePing").innerText = ping
+			//}
+			
+			
+			switch(stat) {
+				case 'unknown':
+					//document.getElementById(node).src = 'images\\server_down.png'
+					//document.getElementById(node+"TableStatus").src = "images\\redButton.png"
+					document.getElementById(name).src = "images\\redButton.png"
+					
+					break;
+				case 'down':
+					//document.getElementById(node+"TableStatus").src = "images\\yellowButton.png"
+					document.getElementById(name).src = "images\\yellowButton.png"
+					break;
+				case 'active':
+					//document.getElementById(node).style.backgroundColor = "green"
+					//document.getElementById(node+"TableStatus").src = "images\\greenButton.png"
+					document.getElementById(name).src = "images\\greenButton.png"
+					break;
+				default:
+					document.getElementById(name).src = "images\\greenButton.png"
+					//document.getElementById(node).style.backgroundColor = "black"
+			}
+			//document.getElementById(node).title = "Node: " + node + "\n" + "ping: " + ping + "ms";
+			document.getElementById(name).title = "Name: " + name + "\nStatus: " + stat;
+		  }
+		  
+          console.log(reader.result.substring(0, 200));
+        };
+		reader.readAsText(input.files[0]);
+      };
+
+</script>
+
+</html>

@@ -1,0 +1,86 @@
+.wrapper {
+	width: 330px;
+	margin:0 auto;
+}
+
+.widgetBackground {
+	border: 2px solid;
+	background-color: #0a1429;
+}
+
+.gridBox {
+	width: 556px;
+	height: 244px;
+	border: 3px solid;	
+}
+
+.nodeSpotLeft {
+	width: 125px;
+	height: 75px;
+	float: left;
+	border: 1px solid;
+}
+
+.nodeSpotRight {
+	width: 125px;
+	height: 75px;
+	float: right;
+	border: 1px solid;
+}
+
+.nodeSpot {
+	width: 278px;
+	height: 61px;
+	float: left;
+}
+
+.rcorners {
+	border-radius: 5px;
+	border: 2px;
+}
+
+table.visibleTable{
+	border-spacing:0;
+	border: solid teal 2px;
+	border-radius: 5px;
+	-moz-border-radius:5px;
+	margin: 0 auto;
+}
+
+table.visibleTable th {
+	background: #BCDBEB; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#BCDBEB, #89ACBE); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#BCDBEB, #89ACBE); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#BCDBEB, #89ACBE); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#BCDBEB, #89ACBE); /* Standard syntax */
+	background-color: linear-gradient(#BCDBEB,#89ACBE);
+	color: white;
+	font-size: 22px;
+	text-shadow: 2px 2px #000000;
+}
+
+table.visibleTable td {
+	color: #3B4750;	
+}
+
+table.visibleTable th, td {
+	padding: 5px;
+	text-align: center;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+table.visibleTable tr:nth-child(even) {
+	background-color: #E6E6E6;
+}
+
+table.visibleTable tr:nth-child(odd) {
+	background-color: #F1F1F1;
+}
+
+table.invisibleTable {
+	border: none;
+}
+
+h2 {
+	text-align: center;
+}
